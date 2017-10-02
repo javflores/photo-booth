@@ -11,6 +11,12 @@ class PhotoBooth extends Component {
         };
     }
 
+    imageSelected = (imageSelected) => {
+        this.setState({
+            currentImage: imageSelected
+        });
+    }
+
     render() {
         return (
             <div>
@@ -23,8 +29,11 @@ class PhotoBooth extends Component {
                     </div>
                 </header>
 
-                <Thumbnails />
-                <MainImage />
+                <Thumbnails
+                    currentImage={this.state.currentImage}
+                    imageSelected={this.imageSelected}/>
+                <MainImage
+                    currentImage={this.state.currentImage}/>
             </div>
         );
     }

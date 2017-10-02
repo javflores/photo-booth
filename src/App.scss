@@ -32,9 +32,11 @@ header.masthead {
   min-height: 220px;
 }
 
-.thumbnail{
-  .selected{
-    border: 2px black;
-  }
+.thumbnail.selected {
+  border-color: black;
+  border-width: 5px;
+}
+.thumbnail {
+  cursor: pointer;
 }
 
