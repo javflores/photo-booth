@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 import Thumbnails from './thumbnails';
 import MainImage from './main-image';
+import ImageStore from './image-store';
 
 class PhotoBooth extends Component {
     constructor(props){
@@ -15,6 +16,29 @@ class PhotoBooth extends Component {
         this.setState({
             currentImage: imageSelected
         });
+    }
+
+    isFirstImage(){
+        return this.state.currentImage === 1;
+    }
+
+    isLastImage(){
+        return this.state.currentImage === ImageStore.allImages.length;
+    }
+
+    previous = () => {
+        let currentImage = this.isFirstImage() ? 3 : this.state.currentImage - 1;
+
+        this.setState({
+            currentImage: currentImage
+        })
+    }
+
+    next = () => {
+        let currentImage = this.isLastImage() ? 1 : this.state.currentImage + 1;
+        this.setState({
+            currentImage: currentImage
+        })
     }
 
     render() {
@@ -33,7 +57,9 @@ class PhotoBooth extends Component {
                     currentImage={this.state.currentImage}
                     imageSelected={this.imageSelected}/>
                 <MainImage
-                    currentImage={this.state.currentImage}/>
+                    currentImage={this.state.currentImage}
+                    previous={this.previous}
+                    next={this.next}/>
             </div>
         );
     }
