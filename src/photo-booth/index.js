@@ -4,40 +4,19 @@ import Thumbnails from './thumbnails';
 import Photo from './photo';
 import Header from './header';
 import PhotoControls from './photo-controls';
-import ImageStore from './photo-store';
+import PhotoStore from './photo-store';
 
 class PhotoBooth extends Component {
     constructor(props){
         super(props);
+        this.photoStore = new PhotoStore(this.storeUpdated);
         this.state = {
-            currentPhoto: 1
+            currentPhoto: 1,
+            allPhotos: this.photoStore.getAllPhotos()
         };
     }
 
-    photoSelected = (photoSelected) => {
-        this.setState({
-            currentPhoto: photoSelected
-        });
-    }
-
-    isFirstPhoto(){
-        return this.state.currentPhoto === 1;
-    }
-
-    isLastPhoto(){
-        return this.state.currentPhoto === ImageStore.allPhotos.length;
-    }
-
-    previous = () => {
-        let currentPhoto = this.isFirstPhoto() ? 3 : this.state.currentPhoto - 1;
-
-        this.setState({
-            currentPhoto: currentPhoto
-        })
-    }
-
-    next = () => {
-        let currentPhoto = this.isLastPhoto() ? 1 : this.state.currentPhoto + 1;
+    storeUpdated = (currentPhoto) => {
         this.setState({
             currentPhoto: currentPhoto
         })
@@ -50,17 +29,16 @@ class PhotoBooth extends Component {
                 <Header />
 
                 <Thumbnails
+                    allPhotos={this.state.allPhotos}
                     currentPhoto={this.state.currentPhoto}
-                    photoSelected={this.photoSelected}/>
+                    photoSelected={(photo) => this.photoStore.photoSelected(photo)}/>
 
                 <PhotoControls
-                    previous={this.previous}
-                    next={this.next}/>
+                    previous={() => this.photoStore.previous()}
+                    next={() => this.photoStore.next()}/>
 
                 <Photo
-                    currentPhoto={this.state.currentPhoto}
-                    previous={this.previous}
-                    next={this.next}/>
+                    photo={this.photoStore.getPhotoMetadata(this.state.currentPhoto)}/>
             </div>
         );
     }
