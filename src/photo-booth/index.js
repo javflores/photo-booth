@@ -1,44 +1,45 @@
 import React, {Component} from 'react';
 
 import Thumbnails from './thumbnails';
-import MainImage from './main-image';
+import Photo from './photo';
 import Header from './header';
-import ImageStore from './image-store';
+import PhotoControls from './photo-controls';
+import ImageStore from './photo-store';
 
 class PhotoBooth extends Component {
     constructor(props){
         super(props);
         this.state = {
-            currentImage: 1
+            currentPhoto: 1
         };
     }
 
-    imageSelected = (imageSelected) => {
+    photoSelected = (photoSelected) => {
         this.setState({
-            currentImage: imageSelected
+            currentPhoto: photoSelected
         });
     }
 
-    isFirstImage(){
-        return this.state.currentImage === 1;
+    isFirstPhoto(){
+        return this.state.currentPhoto === 1;
     }
 
-    isLastImage(){
-        return this.state.currentImage === ImageStore.allImages.length;
+    isLastPhoto(){
+        return this.state.currentPhoto === ImageStore.allPhotos.length;
     }
 
     previous = () => {
-        let currentImage = this.isFirstImage() ? 3 : this.state.currentImage - 1;
+        let currentPhoto = this.isFirstPhoto() ? 3 : this.state.currentPhoto - 1;
 
         this.setState({
-            currentImage: currentImage
+            currentPhoto: currentPhoto
         })
     }
 
     next = () => {
-        let currentImage = this.isLastImage() ? 1 : this.state.currentImage + 1;
+        let currentPhoto = this.isLastPhoto() ? 1 : this.state.currentPhoto + 1;
         this.setState({
-            currentImage: currentImage
+            currentPhoto: currentPhoto
         })
     }
 
@@ -47,11 +48,17 @@ class PhotoBooth extends Component {
             <div>
 
                 <Header />
+
                 <Thumbnails
-                    currentImage={this.state.currentImage}
-                    imageSelected={this.imageSelected}/>
-                <MainImage
-                    currentImage={this.state.currentImage}
+                    currentPhoto={this.state.currentPhoto}
+                    photoSelected={this.photoSelected}/>
+
+                <PhotoControls
+                    previous={this.previous}
+                    next={this.next}/>
+
+                <Photo
+                    currentPhoto={this.state.currentPhoto}
                     previous={this.previous}
                     next={this.next}/>
             </div>

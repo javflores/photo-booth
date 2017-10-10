@@ -1,5 +1,5 @@
 const ImageStore = {
-    allImages: [
+    allPhotos: [
         {
             index: 1,
             title: "Baseball",
