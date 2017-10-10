@@ -25,12 +25,10 @@ class PhotoBooth extends Component {
     render() {
         return (
             <div>
-
                 <Header />
 
                 <Thumbnails
                     allPhotos={this.state.allPhotos}
-                    currentPhoto={this.state.currentPhoto}
                     photoSelected={(photo) => this.photoStore.photoSelected(photo)}/>
 
                 <PhotoControls
@@ -38,7 +36,7 @@ class PhotoBooth extends Component {
                     next={() => this.photoStore.next()}/>
 
                 <Photo
-                    photo={this.photoStore.getPhotoMetadata(this.state.currentPhoto)}/>
+                    photo={this.photoStore.getBigPhoto()}/>
             </div>
         );
     }

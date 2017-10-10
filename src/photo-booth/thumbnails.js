@@ -1,7 +1,7 @@
 import React from 'react';
 import {Grid, Row, Col, Thumbnail} from 'react-bootstrap';
 
-export default ({allPhotos, currentPhoto, photoSelected}) => (
+export default ({allPhotos, photoSelected}) => (
     <div className="col-lg-6 col-md-offset-3">
         <Grid>
             <Row>
@@ -9,7 +9,7 @@ export default ({allPhotos, currentPhoto, photoSelected}) => (
                     return (
                         <Col key={photo.title} xs={6} md={3}>
                             <Thumbnail
-                                className={currentPhoto === photo.index ? "selected" : ""}
+                                className={photo.selected ? "selected" : ""}
                                 alt={photo.title}
                                 src={photo.tinySrc}
                                 onClick={() => photoSelected(photo.index)}/>
