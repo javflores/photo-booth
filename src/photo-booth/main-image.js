@@ -2,7 +2,7 @@ import React from 'react';
 import {Image, Button} from 'react-bootstrap';
 import ImageStore from './image-store';
 
-const MainImage = ({currentImage, previous, next}) => {
+export default ({currentImage, previous, next}) => {
     const imageMetadata = getCurrentImageMetadata(currentImage);
     return (
         <div className="row">
@@ -37,5 +37,3 @@ function getCurrentImageMetadata(currentImage) {
         title: image.title
     };
 };
-
-export default MainImage;

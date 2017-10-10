@@ -2,7 +2,7 @@ import React from 'react';
 import {Grid, Row, Col, Thumbnail} from 'react-bootstrap';
 import ImageStore from './image-store';
 
-const Thumbnails = ({currentImage, imageSelected}) => (
+export default ({currentImage, imageSelected}) => (
     <div className="col-lg-6 col-md-offset-3">
         <Grid>
             <Row>
@@ -21,5 +21,3 @@ const Thumbnails = ({currentImage, imageSelected}) => (
         </Grid>
     </div>
 );
-
-export default Thumbnails;

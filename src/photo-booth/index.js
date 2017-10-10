@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 import Thumbnails from './thumbnails';
 import MainImage from './main-image';
+import Header from './header';
 import ImageStore from './image-store';
 
 class PhotoBooth extends Component {
@@ -44,15 +45,8 @@ class PhotoBooth extends Component {
     render() {
         return (
             <div>
-                <header className="masthead">
-                    <div className="header-content">
-                        <div className="header-content-inner">
-                            <h1 id="homeHeading">PhotoBooth!</h1>
-                            <hr/>
-                        </div>
-                    </div>
-                </header>
 
+                <Header />
                 <Thumbnails
                     currentImage={this.state.currentImage}
                     imageSelected={this.imageSelected}/>

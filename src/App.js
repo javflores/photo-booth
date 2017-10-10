@@ -6,7 +6,7 @@ import './App.css';
 const App = () => (
   <div className="App">
     <Switch>
-        <Route exact path='/' component={PhotoBooth}/>
+        <Route exact path='/photobooth' component={PhotoBooth}/>
     </Switch>
   </div>
 );
