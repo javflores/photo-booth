@@ -1,6 +1,6 @@
 class ImageStore {
   constructor(triggerPhotoChanged){
-      this.allPhotos = [
+      this._allPhotos = [
           {
               index: 1,
               title: "Baseball",
@@ -28,7 +28,7 @@ class ImageStore {
   }
 
   getBigPhoto(){
-      const photo = this.allPhotos[this._currentPhoto - 1];
+      const photo = this._allPhotos[this._currentPhoto - 1];
       return {
           bigSrc: photo.bigSrc,
           title: photo.title
@@ -36,12 +36,12 @@ class ImageStore {
   }
 
   getAllPhotos(){
-      return this.allPhotos;
+      return this._allPhotos;
   }
 
   photoSelected(photoSelected){
       this._currentPhoto = photoSelected;
-      this.allPhotos = this.allPhotos.map((photo) => {
+      this._allPhotos = this._allPhotos.map((photo) => {
           photo.selected = this._currentPhoto === photo.index;
           return photo;
       }, this);
@@ -53,15 +53,32 @@ class ImageStore {
   }
 
   _isLastPhoto(){
-      return this._currentPhoto === this.allPhotos.length;
+      return this._currentPhoto === this._allPhotos.length;
   }
 
   previous(){
-      this.photoSelected(this._isFirstPhoto() ? this.allPhotos.length : this._currentPhoto - 1);
+      let previousPhoto = this._isFirstPhoto() ? this._allPhotos.length : this._currentPhoto - 1;
+      this.photoSelected(previousPhoto);
   }
 
   next(){
-      this.photoSelected(this._isLastPhoto() ? 1 : this._currentPhoto + 1);
+      let nextPhoto = this._isLastPhoto() ? 1 : this._currentPhoto + 1;
+      this.photoSelected(nextPhoto);
+  }
+
+  random(){
+      let random = this._generateNextRandom();
+      this.photoSelected(random);
+  }
+
+  _generateNextRandom() {
+      let random = Math.floor(Math.random() * this._allPhotos.length) + 1;
+      if(random === this._currentPhoto){
+          return this._generateNextRandom();
+      }
+      else{
+          return random;
+      }
   }
 };
 

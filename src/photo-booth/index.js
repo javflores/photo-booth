@@ -33,7 +33,8 @@ class PhotoBooth extends Component {
 
                 <PhotoControls
                     previous={() => this.photoStore.previous()}
-                    next={() => this.photoStore.next()}/>
+                    next={() => this.photoStore.next()}
+                    random={() => this.photoStore.random()}/>
 
                 <Photo
                     photo={this.photoStore.getBigPhoto()}/>
