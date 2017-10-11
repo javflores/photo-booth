@@ -4,22 +4,31 @@ import Thumbnails from './thumbnails';
 import Photo from './photo';
 import Header from './header';
 import PhotoControls from './photo-controls';
-import PhotoStore from './photo-store';
+import photoReducer from './photo-reducer';
 
 class PhotoBooth extends Component {
     constructor(props){
         super(props);
-        this.photoStore = new PhotoStore(this.storeUpdated);
-        this.state = {
-            currentPhoto: 1,
-            allPhotos: this.photoStore.getAllPhotos()
-        };
+        this.state = photoReducer({
+            currentPhoto: undefined,
+            allPhotos: []
+        }, {type: "INIT"});
     }
 
-    storeUpdated = (currentPhoto) => {
-        this.setState({
-            currentPhoto: currentPhoto
-        })
+    dispatch(action) {
+        this.setState(prevState => photoReducer(prevState, action));
+    }
+
+    thumbnailSelected(thumbnailIndex){
+        this.dispatch({type: 'THUMBNAIL', thumbnailIndex: thumbnailIndex});
+    }
+
+    previous = () => {
+        this.dispatch({type: 'PREVIOUS'});
+    }
+
+    next = () => {
+        this.dispatch({type: 'NEXT'});
     }
 
     render() {
@@ -29,15 +38,16 @@ class PhotoBooth extends Component {
 
                 <Thumbnails
                     allPhotos={this.state.allPhotos}
-                    photoSelected={(photo) => this.photoStore.photoSelected(photo)}/>
+                    currentPhoto={this.state.currentPhoto}
+                    thumbnailSelected={(thumbnailIndex) => this.thumbnailSelected(thumbnailIndex)}/>
 
                 <PhotoControls
-                    previous={() => this.photoStore.previous()}
-                    next={() => this.photoStore.next()}
-                    random={() => this.photoStore.random()}/>
+                    previous={this.previous}
+                    next={this.next}
+                    random={this.random}/>
 
                 <Photo
-                    photo={this.photoStore.getBigPhoto()}/>
+                    photo={this.state.currentPhoto.photo}/>
             </div>
         );
     }
