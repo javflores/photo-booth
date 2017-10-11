@@ -36,6 +36,16 @@ function nextPhoto(currentPhoto, allPhotos){
     return currentPhoto.index === allPhotos.length ? 1 : currentPhoto.index + 1;
 }
 
+function randomPhoto(currentPhoto, allPhotos) {
+    let random = Math.floor(Math.random() * allPhotos.length) + 1;
+    if(random === currentPhoto.index){
+        return randomPhoto(currentPhoto, allPhotos);
+    }
+    else{
+        return random;
+    }
+}
+
 function photoReducer(state, action){
     switch(action.type){
         case 'INIT':
@@ -52,17 +62,29 @@ function photoReducer(state, action){
             };
 
         case 'PREVIOUS':
-            const previous = previousPhoto(state.currentPhoto, state.allPhotos);
             return {
-                currentPhoto: selectPhoto(previous, state.allPhotos),
+                currentPhoto: selectPhoto(
+                    previousPhoto(state.currentPhoto, state.allPhotos),
+                    state.allPhotos
+                ),
                 allPhotos: state.allPhotos
             };
 
         case 'NEXT':
-            const nextIndex = nextPhoto(state.currentPhoto, state.allPhotos);
-
             return {
-                currentPhoto: selectPhoto(nextIndex, state.allPhotos),
+                currentPhoto: selectPhoto(
+                    nextPhoto(state.currentPhoto, state.allPhotos),
+                    state.allPhotos
+                ),
+                allPhotos: state.allPhotos
+            };
+
+        case 'RANDOM':
+            return {
+                currentPhoto: selectPhoto(
+                    randomPhoto(state.currentPhoto, state.allPhotos),
+                    state.allPhotos
+                ),
                 allPhotos: state.allPhotos
             };
 

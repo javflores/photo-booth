@@ -31,6 +31,10 @@ class PhotoBooth extends Component {
         this.dispatch({type: 'NEXT'});
     }
 
+    random = () => {
+        this.dispatch({type: 'RANDOM'});
+    }
+
     render() {
         return (
             <div>

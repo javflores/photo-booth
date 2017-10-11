@@ -1,13 +1,8 @@
 import React from 'react';
 import {Grid, Row, Col, Thumbnail} from 'react-bootstrap';
 
-function isSelectedPhoto(allPhotos, currentPhoto) {
-    for(let i = 0; i < allPhotos.length; i++){
-        if(allPhotos[i].index === currentPhoto.index){
-            return true;
-        }
-    }
-    return false;
+function isSelectedPhoto(thumbnail, currentPhoto) {
+    return thumbnail.index === currentPhoto.index;
 }
 
 export default ({allPhotos, currentPhoto, thumbnailSelected}) => (
@@ -18,7 +13,7 @@ export default ({allPhotos, currentPhoto, thumbnailSelected}) => (
                     return (
                         <Col key={photo.title} xs={6} md={3}>
                             <Thumbnail
-                                className={isSelectedPhoto(allPhotos, currentPhoto) ? "selected" : ""}
+                                className={isSelectedPhoto(photo, currentPhoto) ? "selected" : ""}
                                 alt={photo.title}
                                 src={photo.tinySrc}
                                 onClick={() => thumbnailSelected(photo.index)}/>
