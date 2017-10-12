@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 
+import * as actions from './actions';
+
 import Thumbnails from './thumbnails';
 import Photo from './photo';
 import Header from './header';
@@ -9,10 +11,7 @@ import photoReducer from './photo-reducer';
 class PhotoBooth extends Component {
     constructor(props){
         super(props);
-        this.state = photoReducer({
-            currentPhoto: undefined,
-            allPhotos: []
-        }, {type: "INIT"});
+        this.state = photoReducer(undefined, {type: actions.INIT});
     }
 
     dispatch(action) {
@@ -20,19 +19,19 @@ class PhotoBooth extends Component {
     }
 
     thumbnailSelected(thumbnailIndex){
-        this.dispatch({type: 'THUMBNAIL', thumbnailIndex: thumbnailIndex});
+        this.dispatch({type: actions.THUMBNAIL_SELECTED, thumbnailIndex: thumbnailIndex});
     }
 
     previous = () => {
-        this.dispatch({type: 'PREVIOUS'});
+        this.dispatch({type: actions.PREVIOUS_PHOTO});
     }
 
     next = () => {
-        this.dispatch({type: 'NEXT'});
+        this.dispatch({type: actions.NEXT_PHOTO});
     }
 
     random = () => {
-        this.dispatch({type: 'RANDOM'});
+        this.dispatch({type: actions.RANDOM_PHOTO});
     }
 
     render() {
@@ -51,7 +50,7 @@ class PhotoBooth extends Component {
                     random={this.random}/>
 
                 <Photo
-                    photo={this.state.currentPhoto.photo}/>
+                    photo={this.state.currentPhoto}/>
             </div>
         );
     }
