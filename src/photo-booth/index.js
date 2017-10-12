@@ -7,6 +7,7 @@ import Photo from './photo';
 import Header from './header';
 import PhotoControls from './photo-controls';
 import photoReducer from './photo-reducer';
+import photoStore from './photo-store';
 
 class PhotoBooth extends Component {
     constructor(props){
