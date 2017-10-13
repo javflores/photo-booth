@@ -1,8 +1,11 @@
-export const INIT = "INIT";
-export const THUMBNAIL_SELECTED = 'THUMBNAIL_SELECTED';
-export const PREVIOUS_PHOTO = 'PREVIOUS_PHOTO';
-export const NEXT_PHOTO = 'NEXT_PHOTO';
-export const RANDOM_PHOTO = 'RANDOM_PHOTO';
+import getPhotos from './photo-api';
+
+export function loadPhotos(){
+    return {
+        type: LOAD,
+        photos: getPhotos()
+    };
+}
 
 export function selectThumbnail(index){
     return {
@@ -29,5 +32,10 @@ export function randomPhoto(){
     };
 }
 
+export const LOAD = "LOAD";
+export const THUMBNAIL_SELECTED = 'THUMBNAIL_SELECTED';
+export const PREVIOUS_PHOTO = 'PREVIOUS_PHOTO';
+export const NEXT_PHOTO = 'NEXT_PHOTO';
+export const RANDOM_PHOTO = 'RANDOM_PHOTO';
 
 

@@ -1,38 +1,40 @@
 import React, {Component} from 'react';
 
-import * as actions from './actions';
+import * as actions from '../actions';
 
 import Thumbnails from './thumbnails';
 import Photo from './photo';
 import Header from './header';
 import PhotoControls from './photo-controls';
-import photoReducer from './photo-reducer';
-import photoStore from './photo-store';
 
 class PhotoBooth extends Component {
     constructor(props){
         super(props);
-        this.state = photoReducer(undefined, {type: actions.INIT});
-    }
-
-    dispatch(action) {
-        this.setState(prevState => photoReducer(prevState, action));
+        this.state = props.store.getState();
+        props.store.subscribe(() => {
+            let state = props.store.getState();
+            this.setState(state);
+        });
     }
 
     thumbnailSelected(thumbnailIndex){
-        this.dispatch({type: actions.THUMBNAIL_SELECTED, thumbnailIndex: thumbnailIndex});
+        this.props.store.dispatch(actions.selectThumbnail(thumbnailIndex));
     }
 
     previous = () => {
-        this.dispatch({type: actions.PREVIOUS_PHOTO});
+        this.props.store.dispatch(actions.previousPhoto());
     }
 
     next = () => {
-        this.dispatch({type: actions.NEXT_PHOTO});
+        this.props.store.dispatch(actions.nextPhoto());
     }
 
     random = () => {
-        this.dispatch({type: actions.RANDOM_PHOTO});
+        this.props.store.dispatch(actions.randomPhoto());
+    }
+
+    componentDidMount(){
+        this.props.store.dispatch(actions.loadPhotos());
     }
 
     render() {
