@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import PhotoBooth from './photo-booth/index';
+import PhotoBooth from './components/index';
 import PhotoStore from './store/index';
 import './App.css';
 
