@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="App"
+>
+  <div>
+    <header
+      className="masthead"
+    >
+      <div
+        className="header-content"
+      >
+        <div
+          className="header-content-inner"
+        >
+          <h1
+            id="homeHeading"
+          >
+            PhotoBooth!
+          </h1>
+          <hr />
+        </div>
+      </div>
+    </header>
+    <div
+      className="col-lg-6 col-md-offset-3"
+    >
+      <div
+        className="container"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="col-md-3 col-xs-6"
+          >
+            <div
+              className="selected thumbnail"
+              onClick={[Function]}
+            >
+              <img
+                alt="Baseball"
+                onError={undefined}
+                onLoad={undefined}
+                src="http://lorempixel.com/200/200/sports/1"
+              />
+            </div>
+          </div>
+          <div
+            className="col-md-3 col-xs-6"
+          >
+            <div
+              className="thumbnail"
+              onClick={[Function]}
+            >
+              <img
+                alt="Surf"
+                onError={undefined}
+                onLoad={undefined}
+                src="http://lorempixel.com/200/200/sports/2"
+              />
+            </div>
+          </div>
+          <div
+            className="col-md-3 col-xs-6"
+          >
+            <div
+              className="thumbnail"
+              onClick={[Function]}
+            >
+              <img
+                alt="Bike"
+                onError={undefined}
+                onLoad={undefined}
+                src="http://lorempixel.com/200/200/sports/3"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="col-lg-6 col-md-offset-3"
+    >
+      <button
+        className="col-lg-2 btn btn-info"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        Previous
+      </button>
+      <button
+        className="col-lg-2 btn btn-info"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        Next
+      </button>
+      <button
+        className="col-lg-2 btn btn-info"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        Random
+      </button>
+    </div>
+    <div
+      className="row"
+    >
+      <div
+        className="col-lg-12"
+      >
+        <h2>
+          Baseball
+        </h2>
+      </div>
+      <img
+        className="row"
+        src="http://lorempixel.com/500/500/sports/1"
+        title="Baseball"
+      />
+    </div>
+  </div>
+</div>
+`;
