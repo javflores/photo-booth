@@ -1,23 +1,32 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { shallow } from 'enzyme';
+
 import {loadPhotos} from '../actions';
+import store from '../store';
 
 import Index from './index';
 
-it('calls store dispatch with load action when component is mounted', () => {
-    const storeGetState = jest.fn().mockReturnValueOnce({
-        currentPhoto: {title: "", index: 0},
-        allPhotos: []
-    }),
+describe('When photo booth', () => {
+    let dispatchMock, store;
+    beforeEach(() => {
         dispatchMock = jest.fn();
-    const store = {
-        dispatch: dispatchMock,
-        getState: storeGetState,
-        subscribe: jest.fn()
-    };
+        const storeGetState = jest.fn().mockReturnValueOnce({
+            currentPhoto: {title: "", index: 0},
+            allPhotos: []
+        });
 
-    const div = document.createElement('div');
-    ReactDOM.render(<Index store={store}/>, div);
+        store = {
+            dispatch: dispatchMock,
+            getState: storeGetState,
+            subscribe: jest.fn()
+        };
 
-    expect(dispatchMock).toHaveBeenCalledWith(loadPhotos());
+        shallow(<Index store={store}/>);
+    });
+
+    it('calls store dispatch with load action when mounted', () => {
+        expect(dispatchMock).toHaveBeenCalledWith(loadPhotos());
+    });
 });
+
+

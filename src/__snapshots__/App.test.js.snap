@@ -1,129 +1,2640 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
-<div
-  className="App"
+exports[`can navigate through the photos 1`] = `
+<App
+  store={[Function]}
 >
-  <div>
-    <header
-      className="masthead"
+  <div
+    className="App"
+  >
+    <PhotoBooth
+      store={
+        PhotoStore {
+          "listeners": Array [
+            [Function],
+            [Function],
+          ],
+          "state": Object {
+            "allPhotos": Array [
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/1",
+                "index": 1,
+                "tinySrc": "http://lorempixel.com/200/200/sports/1",
+                "title": "Baseball",
+              },
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/2",
+                "index": 2,
+                "tinySrc": "http://lorempixel.com/200/200/sports/2",
+                "title": "Surf",
+              },
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/3",
+                "index": 3,
+                "tinySrc": "http://lorempixel.com/200/200/sports/3",
+                "title": "Bike",
+              },
+            ],
+            "currentPhoto": Object {
+              "bigSrc": "http://lorempixel.com/500/500/sports/1",
+              "index": 1,
+              "tinySrc": "http://lorempixel.com/200/200/sports/1",
+              "title": "Baseball",
+            },
+          },
+        }
+      }
     >
-      <div
-        className="header-content"
-      >
-        <div
-          className="header-content-inner"
+      <div>
+        <Component>
+          <header
+            className="masthead"
+          >
+            <div
+              className="header-content"
+            >
+              <div
+                className="header-content-inner"
+              >
+                <h1
+                  id="homeHeading"
+                >
+                  PhotoBooth!
+                </h1>
+                <hr />
+              </div>
+            </div>
+          </header>
+        </Component>
+        <Component
+          allPhotos={
+            Array [
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/1",
+                "index": 1,
+                "tinySrc": "http://lorempixel.com/200/200/sports/1",
+                "title": "Baseball",
+              },
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/2",
+                "index": 2,
+                "tinySrc": "http://lorempixel.com/200/200/sports/2",
+                "title": "Surf",
+              },
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/3",
+                "index": 3,
+                "tinySrc": "http://lorempixel.com/200/200/sports/3",
+                "title": "Bike",
+              },
+            ]
+          }
+          currentPhoto={
+            Object {
+              "bigSrc": "http://lorempixel.com/500/500/sports/1",
+              "index": 1,
+              "tinySrc": "http://lorempixel.com/200/200/sports/1",
+              "title": "Baseball",
+            }
+          }
+          thumbnailSelected={[Function]}
         >
-          <h1
-            id="homeHeading"
+          <div
+            className="col-lg-6 col-md-offset-3"
           >
-            PhotoBooth!
-          </h1>
-          <hr />
-        </div>
-      </div>
-    </header>
-    <div
-      className="col-lg-6 col-md-offset-3"
-    >
-      <div
-        className="container"
-      >
-        <div
-          className="row"
+            <Grid
+              bsClass="container"
+              componentClass="div"
+              fluid={false}
+            >
+              <div
+                className="container"
+              >
+                <Row
+                  bsClass="row"
+                  componentClass="div"
+                >
+                  <div
+                    className="row"
+                  >
+                    <Col
+                      bsClass="col"
+                      componentClass="div"
+                      key="Baseball"
+                      md={3}
+                      xs={6}
+                    >
+                      <div
+                        className="col-md-3 col-xs-6"
+                      >
+                        <Thumbnail
+                          alt="Baseball"
+                          bsClass="thumbnail"
+                          className="selected"
+                          onClick={[Function]}
+                          src="http://lorempixel.com/200/200/sports/1"
+                        >
+                          <div
+                            className="selected thumbnail"
+                            onClick={[Function]}
+                          >
+                            <img
+                              alt="Baseball"
+                              onError={undefined}
+                              onLoad={undefined}
+                              src="http://lorempixel.com/200/200/sports/1"
+                            />
+                          </div>
+                        </Thumbnail>
+                      </div>
+                    </Col>
+                    <Col
+                      bsClass="col"
+                      componentClass="div"
+                      key="Surf"
+                      md={3}
+                      xs={6}
+                    >
+                      <div
+                        className="col-md-3 col-xs-6"
+                      >
+                        <Thumbnail
+                          alt="Surf"
+                          bsClass="thumbnail"
+                          className=""
+                          onClick={[Function]}
+                          src="http://lorempixel.com/200/200/sports/2"
+                        >
+                          <div
+                            className="thumbnail"
+                            onClick={[Function]}
+                          >
+                            <img
+                              alt="Surf"
+                              onError={undefined}
+                              onLoad={undefined}
+                              src="http://lorempixel.com/200/200/sports/2"
+                            />
+                          </div>
+                        </Thumbnail>
+                      </div>
+                    </Col>
+                    <Col
+                      bsClass="col"
+                      componentClass="div"
+                      key="Bike"
+                      md={3}
+                      xs={6}
+                    >
+                      <div
+                        className="col-md-3 col-xs-6"
+                      >
+                        <Thumbnail
+                          alt="Bike"
+                          bsClass="thumbnail"
+                          className=""
+                          onClick={[Function]}
+                          src="http://lorempixel.com/200/200/sports/3"
+                        >
+                          <div
+                            className="thumbnail"
+                            onClick={[Function]}
+                          >
+                            <img
+                              alt="Bike"
+                              onError={undefined}
+                              onLoad={undefined}
+                              src="http://lorempixel.com/200/200/sports/3"
+                            />
+                          </div>
+                        </Thumbnail>
+                      </div>
+                    </Col>
+                  </div>
+                </Row>
+              </div>
+            </Grid>
+          </div>
+        </Component>
+        <Component
+          next={[Function]}
+          previous={[Function]}
+          random={[Function]}
         >
           <div
-            className="col-md-3 col-xs-6"
+            className="col-lg-6 col-md-offset-3"
           >
-            <div
-              className="selected thumbnail"
+            <Button
+              active={false}
+              block={false}
+              bsClass="btn"
+              bsStyle="info"
+              className="col-lg-2"
+              disabled={false}
+              id="previous"
               onClick={[Function]}
             >
-              <img
-                alt="Baseball"
-                onError={undefined}
-                onLoad={undefined}
-                src="http://lorempixel.com/200/200/sports/1"
-              />
-            </div>
+              <button
+                className="col-lg-2 btn btn-info"
+                disabled={false}
+                id="previous"
+                onClick={[Function]}
+                type="button"
+              >
+                Previous
+              </button>
+            </Button>
+            <Button
+              active={false}
+              block={false}
+              bsClass="btn"
+              bsStyle="info"
+              className="col-lg-2"
+              disabled={false}
+              id="next"
+              onClick={[Function]}
+            >
+              <button
+                className="col-lg-2 btn btn-info"
+                disabled={false}
+                id="next"
+                onClick={[Function]}
+                type="button"
+              >
+                Next
+              </button>
+            </Button>
+            <Button
+              active={false}
+              block={false}
+              bsClass="btn"
+              bsStyle="info"
+              className="col-lg-2"
+              disabled={false}
+              id="random"
+              onClick={[Function]}
+            >
+              <button
+                className="col-lg-2 btn btn-info"
+                disabled={false}
+                id="random"
+                onClick={[Function]}
+                type="button"
+              >
+                Random
+              </button>
+            </Button>
           </div>
+        </Component>
+        <Component
+          photo={
+            Object {
+              "bigSrc": "http://lorempixel.com/500/500/sports/1",
+              "index": 1,
+              "tinySrc": "http://lorempixel.com/200/200/sports/1",
+              "title": "Baseball",
+            }
+          }
+        >
           <div
-            className="col-md-3 col-xs-6"
+            className="row"
           >
             <div
-              className="thumbnail"
-              onClick={[Function]}
+              className="col-lg-12"
+            >
+              <h2>
+                Baseball
+              </h2>
+            </div>
+            <Image
+              bsClass="img"
+              circle={false}
+              className="row"
+              responsive={false}
+              rounded={false}
+              src="http://lorempixel.com/500/500/sports/1"
+              thumbnail={false}
+              title="Baseball"
             >
               <img
-                alt="Surf"
-                onError={undefined}
-                onLoad={undefined}
-                src="http://lorempixel.com/200/200/sports/2"
+                className="row"
+                src="http://lorempixel.com/500/500/sports/1"
+                title="Baseball"
               />
-            </div>
+            </Image>
           </div>
-          <div
-            className="col-md-3 col-xs-6"
-          >
-            <div
-              className="thumbnail"
-              onClick={[Function]}
-            >
-              <img
-                alt="Bike"
-                onError={undefined}
-                onLoad={undefined}
-                src="http://lorempixel.com/200/200/sports/3"
-              />
-            </div>
-          </div>
-        </div>
+        </Component>
       </div>
-    </div>
-    <div
-      className="col-lg-6 col-md-offset-3"
-    >
-      <button
-        className="col-lg-2 btn btn-info"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-        Previous
-      </button>
-      <button
-        className="col-lg-2 btn btn-info"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-        Next
-      </button>
-      <button
-        className="col-lg-2 btn btn-info"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-        Random
-      </button>
-    </div>
-    <div
-      className="row"
-    >
-      <div
-        className="col-lg-12"
-      >
-        <h2>
-          Baseball
-        </h2>
-      </div>
-      <img
-        className="row"
-        src="http://lorempixel.com/500/500/sports/1"
-        title="Baseball"
-      />
-    </div>
+    </PhotoBooth>
   </div>
-</div>
+</App>
+`;
+
+exports[`can navigate through the photos 2`] = `
+<App
+  store={[Function]}
+>
+  <div
+    className="App"
+  >
+    <PhotoBooth
+      store={
+        PhotoStore {
+          "listeners": Array [
+            [Function],
+            [Function],
+          ],
+          "state": Object {
+            "allPhotos": Array [
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/1",
+                "index": 1,
+                "tinySrc": "http://lorempixel.com/200/200/sports/1",
+                "title": "Baseball",
+              },
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/2",
+                "index": 2,
+                "tinySrc": "http://lorempixel.com/200/200/sports/2",
+                "title": "Surf",
+              },
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/3",
+                "index": 3,
+                "tinySrc": "http://lorempixel.com/200/200/sports/3",
+                "title": "Bike",
+              },
+            ],
+            "currentPhoto": Object {
+              "bigSrc": "http://lorempixel.com/500/500/sports/2",
+              "index": 2,
+              "tinySrc": "http://lorempixel.com/200/200/sports/2",
+              "title": "Surf",
+            },
+          },
+        }
+      }
+    >
+      <div>
+        <Component>
+          <header
+            className="masthead"
+          >
+            <div
+              className="header-content"
+            >
+              <div
+                className="header-content-inner"
+              >
+                <h1
+                  id="homeHeading"
+                >
+                  PhotoBooth!
+                </h1>
+                <hr />
+              </div>
+            </div>
+          </header>
+        </Component>
+        <Component
+          allPhotos={
+            Array [
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/1",
+                "index": 1,
+                "tinySrc": "http://lorempixel.com/200/200/sports/1",
+                "title": "Baseball",
+              },
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/2",
+                "index": 2,
+                "tinySrc": "http://lorempixel.com/200/200/sports/2",
+                "title": "Surf",
+              },
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/3",
+                "index": 3,
+                "tinySrc": "http://lorempixel.com/200/200/sports/3",
+                "title": "Bike",
+              },
+            ]
+          }
+          currentPhoto={
+            Object {
+              "bigSrc": "http://lorempixel.com/500/500/sports/2",
+              "index": 2,
+              "tinySrc": "http://lorempixel.com/200/200/sports/2",
+              "title": "Surf",
+            }
+          }
+          thumbnailSelected={[Function]}
+        >
+          <div
+            className="col-lg-6 col-md-offset-3"
+          >
+            <Grid
+              bsClass="container"
+              componentClass="div"
+              fluid={false}
+            >
+              <div
+                className="container"
+              >
+                <Row
+                  bsClass="row"
+                  componentClass="div"
+                >
+                  <div
+                    className="row"
+                  >
+                    <Col
+                      bsClass="col"
+                      componentClass="div"
+                      key="Baseball"
+                      md={3}
+                      xs={6}
+                    >
+                      <div
+                        className="col-md-3 col-xs-6"
+                      >
+                        <Thumbnail
+                          alt="Baseball"
+                          bsClass="thumbnail"
+                          className=""
+                          onClick={[Function]}
+                          src="http://lorempixel.com/200/200/sports/1"
+                        >
+                          <div
+                            className="thumbnail"
+                            onClick={[Function]}
+                          >
+                            <img
+                              alt="Baseball"
+                              onError={undefined}
+                              onLoad={undefined}
+                              src="http://lorempixel.com/200/200/sports/1"
+                            />
+                          </div>
+                        </Thumbnail>
+                      </div>
+                    </Col>
+                    <Col
+                      bsClass="col"
+                      componentClass="div"
+                      key="Surf"
+                      md={3}
+                      xs={6}
+                    >
+                      <div
+                        className="col-md-3 col-xs-6"
+                      >
+                        <Thumbnail
+                          alt="Surf"
+                          bsClass="thumbnail"
+                          className="selected"
+                          onClick={[Function]}
+                          src="http://lorempixel.com/200/200/sports/2"
+                        >
+                          <div
+                            className="selected thumbnail"
+                            onClick={[Function]}
+                          >
+                            <img
+                              alt="Surf"
+                              onError={undefined}
+                              onLoad={undefined}
+                              src="http://lorempixel.com/200/200/sports/2"
+                            />
+                          </div>
+                        </Thumbnail>
+                      </div>
+                    </Col>
+                    <Col
+                      bsClass="col"
+                      componentClass="div"
+                      key="Bike"
+                      md={3}
+                      xs={6}
+                    >
+                      <div
+                        className="col-md-3 col-xs-6"
+                      >
+                        <Thumbnail
+                          alt="Bike"
+                          bsClass="thumbnail"
+                          className=""
+                          onClick={[Function]}
+                          src="http://lorempixel.com/200/200/sports/3"
+                        >
+                          <div
+                            className="thumbnail"
+                            onClick={[Function]}
+                          >
+                            <img
+                              alt="Bike"
+                              onError={undefined}
+                              onLoad={undefined}
+                              src="http://lorempixel.com/200/200/sports/3"
+                            />
+                          </div>
+                        </Thumbnail>
+                      </div>
+                    </Col>
+                  </div>
+                </Row>
+              </div>
+            </Grid>
+          </div>
+        </Component>
+        <Component
+          next={[Function]}
+          previous={[Function]}
+          random={[Function]}
+        >
+          <div
+            className="col-lg-6 col-md-offset-3"
+          >
+            <Button
+              active={false}
+              block={false}
+              bsClass="btn"
+              bsStyle="info"
+              className="col-lg-2"
+              disabled={false}
+              id="previous"
+              onClick={[Function]}
+            >
+              <button
+                className="col-lg-2 btn btn-info"
+                disabled={false}
+                id="previous"
+                onClick={[Function]}
+                type="button"
+              >
+                Previous
+              </button>
+            </Button>
+            <Button
+              active={false}
+              block={false}
+              bsClass="btn"
+              bsStyle="info"
+              className="col-lg-2"
+              disabled={false}
+              id="next"
+              onClick={[Function]}
+            >
+              <button
+                className="col-lg-2 btn btn-info"
+                disabled={false}
+                id="next"
+                onClick={[Function]}
+                type="button"
+              >
+                Next
+              </button>
+            </Button>
+            <Button
+              active={false}
+              block={false}
+              bsClass="btn"
+              bsStyle="info"
+              className="col-lg-2"
+              disabled={false}
+              id="random"
+              onClick={[Function]}
+            >
+              <button
+                className="col-lg-2 btn btn-info"
+                disabled={false}
+                id="random"
+                onClick={[Function]}
+                type="button"
+              >
+                Random
+              </button>
+            </Button>
+          </div>
+        </Component>
+        <Component
+          photo={
+            Object {
+              "bigSrc": "http://lorempixel.com/500/500/sports/2",
+              "index": 2,
+              "tinySrc": "http://lorempixel.com/200/200/sports/2",
+              "title": "Surf",
+            }
+          }
+        >
+          <div
+            className="row"
+          >
+            <div
+              className="col-lg-12"
+            >
+              <h2>
+                Surf
+              </h2>
+            </div>
+            <Image
+              bsClass="img"
+              circle={false}
+              className="row"
+              responsive={false}
+              rounded={false}
+              src="http://lorempixel.com/500/500/sports/2"
+              thumbnail={false}
+              title="Surf"
+            >
+              <img
+                className="row"
+                src="http://lorempixel.com/500/500/sports/2"
+                title="Surf"
+              />
+            </Image>
+          </div>
+        </Component>
+      </div>
+    </PhotoBooth>
+  </div>
+</App>
+`;
+
+exports[`can navigate through the photos 3`] = `
+<App
+  store={[Function]}
+>
+  <div
+    className="App"
+  >
+    <PhotoBooth
+      store={
+        PhotoStore {
+          "listeners": Array [
+            [Function],
+            [Function],
+          ],
+          "state": Object {
+            "allPhotos": Array [
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/1",
+                "index": 1,
+                "tinySrc": "http://lorempixel.com/200/200/sports/1",
+                "title": "Baseball",
+              },
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/2",
+                "index": 2,
+                "tinySrc": "http://lorempixel.com/200/200/sports/2",
+                "title": "Surf",
+              },
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/3",
+                "index": 3,
+                "tinySrc": "http://lorempixel.com/200/200/sports/3",
+                "title": "Bike",
+              },
+            ],
+            "currentPhoto": Object {
+              "bigSrc": "http://lorempixel.com/500/500/sports/1",
+              "index": 1,
+              "tinySrc": "http://lorempixel.com/200/200/sports/1",
+              "title": "Baseball",
+            },
+          },
+        }
+      }
+    >
+      <div>
+        <Component>
+          <header
+            className="masthead"
+          >
+            <div
+              className="header-content"
+            >
+              <div
+                className="header-content-inner"
+              >
+                <h1
+                  id="homeHeading"
+                >
+                  PhotoBooth!
+                </h1>
+                <hr />
+              </div>
+            </div>
+          </header>
+        </Component>
+        <Component
+          allPhotos={
+            Array [
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/1",
+                "index": 1,
+                "tinySrc": "http://lorempixel.com/200/200/sports/1",
+                "title": "Baseball",
+              },
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/2",
+                "index": 2,
+                "tinySrc": "http://lorempixel.com/200/200/sports/2",
+                "title": "Surf",
+              },
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/3",
+                "index": 3,
+                "tinySrc": "http://lorempixel.com/200/200/sports/3",
+                "title": "Bike",
+              },
+            ]
+          }
+          currentPhoto={
+            Object {
+              "bigSrc": "http://lorempixel.com/500/500/sports/1",
+              "index": 1,
+              "tinySrc": "http://lorempixel.com/200/200/sports/1",
+              "title": "Baseball",
+            }
+          }
+          thumbnailSelected={[Function]}
+        >
+          <div
+            className="col-lg-6 col-md-offset-3"
+          >
+            <Grid
+              bsClass="container"
+              componentClass="div"
+              fluid={false}
+            >
+              <div
+                className="container"
+              >
+                <Row
+                  bsClass="row"
+                  componentClass="div"
+                >
+                  <div
+                    className="row"
+                  >
+                    <Col
+                      bsClass="col"
+                      componentClass="div"
+                      key="Baseball"
+                      md={3}
+                      xs={6}
+                    >
+                      <div
+                        className="col-md-3 col-xs-6"
+                      >
+                        <Thumbnail
+                          alt="Baseball"
+                          bsClass="thumbnail"
+                          className="selected"
+                          onClick={[Function]}
+                          src="http://lorempixel.com/200/200/sports/1"
+                        >
+                          <div
+                            className="selected thumbnail"
+                            onClick={[Function]}
+                          >
+                            <img
+                              alt="Baseball"
+                              onError={undefined}
+                              onLoad={undefined}
+                              src="http://lorempixel.com/200/200/sports/1"
+                            />
+                          </div>
+                        </Thumbnail>
+                      </div>
+                    </Col>
+                    <Col
+                      bsClass="col"
+                      componentClass="div"
+                      key="Surf"
+                      md={3}
+                      xs={6}
+                    >
+                      <div
+                        className="col-md-3 col-xs-6"
+                      >
+                        <Thumbnail
+                          alt="Surf"
+                          bsClass="thumbnail"
+                          className=""
+                          onClick={[Function]}
+                          src="http://lorempixel.com/200/200/sports/2"
+                        >
+                          <div
+                            className="thumbnail"
+                            onClick={[Function]}
+                          >
+                            <img
+                              alt="Surf"
+                              onError={undefined}
+                              onLoad={undefined}
+                              src="http://lorempixel.com/200/200/sports/2"
+                            />
+                          </div>
+                        </Thumbnail>
+                      </div>
+                    </Col>
+                    <Col
+                      bsClass="col"
+                      componentClass="div"
+                      key="Bike"
+                      md={3}
+                      xs={6}
+                    >
+                      <div
+                        className="col-md-3 col-xs-6"
+                      >
+                        <Thumbnail
+                          alt="Bike"
+                          bsClass="thumbnail"
+                          className=""
+                          onClick={[Function]}
+                          src="http://lorempixel.com/200/200/sports/3"
+                        >
+                          <div
+                            className="thumbnail"
+                            onClick={[Function]}
+                          >
+                            <img
+                              alt="Bike"
+                              onError={undefined}
+                              onLoad={undefined}
+                              src="http://lorempixel.com/200/200/sports/3"
+                            />
+                          </div>
+                        </Thumbnail>
+                      </div>
+                    </Col>
+                  </div>
+                </Row>
+              </div>
+            </Grid>
+          </div>
+        </Component>
+        <Component
+          next={[Function]}
+          previous={[Function]}
+          random={[Function]}
+        >
+          <div
+            className="col-lg-6 col-md-offset-3"
+          >
+            <Button
+              active={false}
+              block={false}
+              bsClass="btn"
+              bsStyle="info"
+              className="col-lg-2"
+              disabled={false}
+              id="previous"
+              onClick={[Function]}
+            >
+              <button
+                className="col-lg-2 btn btn-info"
+                disabled={false}
+                id="previous"
+                onClick={[Function]}
+                type="button"
+              >
+                Previous
+              </button>
+            </Button>
+            <Button
+              active={false}
+              block={false}
+              bsClass="btn"
+              bsStyle="info"
+              className="col-lg-2"
+              disabled={false}
+              id="next"
+              onClick={[Function]}
+            >
+              <button
+                className="col-lg-2 btn btn-info"
+                disabled={false}
+                id="next"
+                onClick={[Function]}
+                type="button"
+              >
+                Next
+              </button>
+            </Button>
+            <Button
+              active={false}
+              block={false}
+              bsClass="btn"
+              bsStyle="info"
+              className="col-lg-2"
+              disabled={false}
+              id="random"
+              onClick={[Function]}
+            >
+              <button
+                className="col-lg-2 btn btn-info"
+                disabled={false}
+                id="random"
+                onClick={[Function]}
+                type="button"
+              >
+                Random
+              </button>
+            </Button>
+          </div>
+        </Component>
+        <Component
+          photo={
+            Object {
+              "bigSrc": "http://lorempixel.com/500/500/sports/1",
+              "index": 1,
+              "tinySrc": "http://lorempixel.com/200/200/sports/1",
+              "title": "Baseball",
+            }
+          }
+        >
+          <div
+            className="row"
+          >
+            <div
+              className="col-lg-12"
+            >
+              <h2>
+                Baseball
+              </h2>
+            </div>
+            <Image
+              bsClass="img"
+              circle={false}
+              className="row"
+              responsive={false}
+              rounded={false}
+              src="http://lorempixel.com/500/500/sports/1"
+              thumbnail={false}
+              title="Baseball"
+            >
+              <img
+                className="row"
+                src="http://lorempixel.com/500/500/sports/1"
+                title="Baseball"
+              />
+            </Image>
+          </div>
+        </Component>
+      </div>
+    </PhotoBooth>
+  </div>
+</App>
+`;
+
+exports[`can navigate through the photos 4`] = `
+<App
+  store={[Function]}
+>
+  <div
+    className="App"
+  >
+    <PhotoBooth
+      store={
+        PhotoStore {
+          "listeners": Array [
+            [Function],
+            [Function],
+          ],
+          "state": Object {
+            "allPhotos": Array [
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/1",
+                "index": 1,
+                "tinySrc": "http://lorempixel.com/200/200/sports/1",
+                "title": "Baseball",
+              },
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/2",
+                "index": 2,
+                "tinySrc": "http://lorempixel.com/200/200/sports/2",
+                "title": "Surf",
+              },
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/3",
+                "index": 3,
+                "tinySrc": "http://lorempixel.com/200/200/sports/3",
+                "title": "Bike",
+              },
+            ],
+            "currentPhoto": Object {
+              "bigSrc": "http://lorempixel.com/500/500/sports/1",
+              "index": 1,
+              "tinySrc": "http://lorempixel.com/200/200/sports/1",
+              "title": "Baseball",
+            },
+          },
+        }
+      }
+    >
+      <div>
+        <Component>
+          <header
+            className="masthead"
+          >
+            <div
+              className="header-content"
+            >
+              <div
+                className="header-content-inner"
+              >
+                <h1
+                  id="homeHeading"
+                >
+                  PhotoBooth!
+                </h1>
+                <hr />
+              </div>
+            </div>
+          </header>
+        </Component>
+        <Component
+          allPhotos={
+            Array [
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/1",
+                "index": 1,
+                "tinySrc": "http://lorempixel.com/200/200/sports/1",
+                "title": "Baseball",
+              },
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/2",
+                "index": 2,
+                "tinySrc": "http://lorempixel.com/200/200/sports/2",
+                "title": "Surf",
+              },
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/3",
+                "index": 3,
+                "tinySrc": "http://lorempixel.com/200/200/sports/3",
+                "title": "Bike",
+              },
+            ]
+          }
+          currentPhoto={
+            Object {
+              "bigSrc": "http://lorempixel.com/500/500/sports/1",
+              "index": 1,
+              "tinySrc": "http://lorempixel.com/200/200/sports/1",
+              "title": "Baseball",
+            }
+          }
+          thumbnailSelected={[Function]}
+        >
+          <div
+            className="col-lg-6 col-md-offset-3"
+          >
+            <Grid
+              bsClass="container"
+              componentClass="div"
+              fluid={false}
+            >
+              <div
+                className="container"
+              >
+                <Row
+                  bsClass="row"
+                  componentClass="div"
+                >
+                  <div
+                    className="row"
+                  >
+                    <Col
+                      bsClass="col"
+                      componentClass="div"
+                      key="Baseball"
+                      md={3}
+                      xs={6}
+                    >
+                      <div
+                        className="col-md-3 col-xs-6"
+                      >
+                        <Thumbnail
+                          alt="Baseball"
+                          bsClass="thumbnail"
+                          className="selected"
+                          onClick={[Function]}
+                          src="http://lorempixel.com/200/200/sports/1"
+                        >
+                          <div
+                            className="selected thumbnail"
+                            onClick={[Function]}
+                          >
+                            <img
+                              alt="Baseball"
+                              onError={undefined}
+                              onLoad={undefined}
+                              src="http://lorempixel.com/200/200/sports/1"
+                            />
+                          </div>
+                        </Thumbnail>
+                      </div>
+                    </Col>
+                    <Col
+                      bsClass="col"
+                      componentClass="div"
+                      key="Surf"
+                      md={3}
+                      xs={6}
+                    >
+                      <div
+                        className="col-md-3 col-xs-6"
+                      >
+                        <Thumbnail
+                          alt="Surf"
+                          bsClass="thumbnail"
+                          className=""
+                          onClick={[Function]}
+                          src="http://lorempixel.com/200/200/sports/2"
+                        >
+                          <div
+                            className="thumbnail"
+                            onClick={[Function]}
+                          >
+                            <img
+                              alt="Surf"
+                              onError={undefined}
+                              onLoad={undefined}
+                              src="http://lorempixel.com/200/200/sports/2"
+                            />
+                          </div>
+                        </Thumbnail>
+                      </div>
+                    </Col>
+                    <Col
+                      bsClass="col"
+                      componentClass="div"
+                      key="Bike"
+                      md={3}
+                      xs={6}
+                    >
+                      <div
+                        className="col-md-3 col-xs-6"
+                      >
+                        <Thumbnail
+                          alt="Bike"
+                          bsClass="thumbnail"
+                          className=""
+                          onClick={[Function]}
+                          src="http://lorempixel.com/200/200/sports/3"
+                        >
+                          <div
+                            className="thumbnail"
+                            onClick={[Function]}
+                          >
+                            <img
+                              alt="Bike"
+                              onError={undefined}
+                              onLoad={undefined}
+                              src="http://lorempixel.com/200/200/sports/3"
+                            />
+                          </div>
+                        </Thumbnail>
+                      </div>
+                    </Col>
+                  </div>
+                </Row>
+              </div>
+            </Grid>
+          </div>
+        </Component>
+        <Component
+          next={[Function]}
+          previous={[Function]}
+          random={[Function]}
+        >
+          <div
+            className="col-lg-6 col-md-offset-3"
+          >
+            <Button
+              active={false}
+              block={false}
+              bsClass="btn"
+              bsStyle="info"
+              className="col-lg-2"
+              disabled={false}
+              id="previous"
+              onClick={[Function]}
+            >
+              <button
+                className="col-lg-2 btn btn-info"
+                disabled={false}
+                id="previous"
+                onClick={[Function]}
+                type="button"
+              >
+                Previous
+              </button>
+            </Button>
+            <Button
+              active={false}
+              block={false}
+              bsClass="btn"
+              bsStyle="info"
+              className="col-lg-2"
+              disabled={false}
+              id="next"
+              onClick={[Function]}
+            >
+              <button
+                className="col-lg-2 btn btn-info"
+                disabled={false}
+                id="next"
+                onClick={[Function]}
+                type="button"
+              >
+                Next
+              </button>
+            </Button>
+            <Button
+              active={false}
+              block={false}
+              bsClass="btn"
+              bsStyle="info"
+              className="col-lg-2"
+              disabled={false}
+              id="random"
+              onClick={[Function]}
+            >
+              <button
+                className="col-lg-2 btn btn-info"
+                disabled={false}
+                id="random"
+                onClick={[Function]}
+                type="button"
+              >
+                Random
+              </button>
+            </Button>
+          </div>
+        </Component>
+        <Component
+          photo={
+            Object {
+              "bigSrc": "http://lorempixel.com/500/500/sports/1",
+              "index": 1,
+              "tinySrc": "http://lorempixel.com/200/200/sports/1",
+              "title": "Baseball",
+            }
+          }
+        >
+          <div
+            className="row"
+          >
+            <div
+              className="col-lg-12"
+            >
+              <h2>
+                Baseball
+              </h2>
+            </div>
+            <Image
+              bsClass="img"
+              circle={false}
+              className="row"
+              responsive={false}
+              rounded={false}
+              src="http://lorempixel.com/500/500/sports/1"
+              thumbnail={false}
+              title="Baseball"
+            >
+              <img
+                className="row"
+                src="http://lorempixel.com/500/500/sports/1"
+                title="Baseball"
+              />
+            </Image>
+          </div>
+        </Component>
+      </div>
+    </PhotoBooth>
+  </div>
+</App>
+`;
+
+exports[`photo booth navigates to next photo 1`] = `
+<App
+  store={[Function]}
+>
+  <div
+    className="App"
+  >
+    <PhotoBooth
+      store={
+        PhotoStore {
+          "listeners": Array [
+            [Function],
+            [Function],
+          ],
+          "state": Object {
+            "allPhotos": Array [
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/1",
+                "index": 1,
+                "tinySrc": "http://lorempixel.com/200/200/sports/1",
+                "title": "Baseball",
+              },
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/2",
+                "index": 2,
+                "tinySrc": "http://lorempixel.com/200/200/sports/2",
+                "title": "Surf",
+              },
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/3",
+                "index": 3,
+                "tinySrc": "http://lorempixel.com/200/200/sports/3",
+                "title": "Bike",
+              },
+            ],
+            "currentPhoto": Object {
+              "bigSrc": "http://lorempixel.com/500/500/sports/2",
+              "index": 2,
+              "tinySrc": "http://lorempixel.com/200/200/sports/2",
+              "title": "Surf",
+            },
+          },
+        }
+      }
+    >
+      <div>
+        <Component>
+          <header
+            className="masthead"
+          >
+            <div
+              className="header-content"
+            >
+              <div
+                className="header-content-inner"
+              >
+                <h1
+                  id="homeHeading"
+                >
+                  PhotoBooth!
+                </h1>
+                <hr />
+              </div>
+            </div>
+          </header>
+        </Component>
+        <Component
+          allPhotos={
+            Array [
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/1",
+                "index": 1,
+                "tinySrc": "http://lorempixel.com/200/200/sports/1",
+                "title": "Baseball",
+              },
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/2",
+                "index": 2,
+                "tinySrc": "http://lorempixel.com/200/200/sports/2",
+                "title": "Surf",
+              },
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/3",
+                "index": 3,
+                "tinySrc": "http://lorempixel.com/200/200/sports/3",
+                "title": "Bike",
+              },
+            ]
+          }
+          currentPhoto={
+            Object {
+              "bigSrc": "http://lorempixel.com/500/500/sports/2",
+              "index": 2,
+              "tinySrc": "http://lorempixel.com/200/200/sports/2",
+              "title": "Surf",
+            }
+          }
+          thumbnailSelected={[Function]}
+        >
+          <div
+            className="col-lg-6 col-md-offset-3"
+          >
+            <Grid
+              bsClass="container"
+              componentClass="div"
+              fluid={false}
+            >
+              <div
+                className="container"
+              >
+                <Row
+                  bsClass="row"
+                  componentClass="div"
+                >
+                  <div
+                    className="row"
+                  >
+                    <Col
+                      bsClass="col"
+                      componentClass="div"
+                      key="Baseball"
+                      md={3}
+                      xs={6}
+                    >
+                      <div
+                        className="col-md-3 col-xs-6"
+                      >
+                        <Thumbnail
+                          alt="Baseball"
+                          bsClass="thumbnail"
+                          className=""
+                          onClick={[Function]}
+                          src="http://lorempixel.com/200/200/sports/1"
+                        >
+                          <div
+                            className="thumbnail"
+                            onClick={[Function]}
+                          >
+                            <img
+                              alt="Baseball"
+                              onError={undefined}
+                              onLoad={undefined}
+                              src="http://lorempixel.com/200/200/sports/1"
+                            />
+                          </div>
+                        </Thumbnail>
+                      </div>
+                    </Col>
+                    <Col
+                      bsClass="col"
+                      componentClass="div"
+                      key="Surf"
+                      md={3}
+                      xs={6}
+                    >
+                      <div
+                        className="col-md-3 col-xs-6"
+                      >
+                        <Thumbnail
+                          alt="Surf"
+                          bsClass="thumbnail"
+                          className="selected"
+                          onClick={[Function]}
+                          src="http://lorempixel.com/200/200/sports/2"
+                        >
+                          <div
+                            className="selected thumbnail"
+                            onClick={[Function]}
+                          >
+                            <img
+                              alt="Surf"
+                              onError={undefined}
+                              onLoad={undefined}
+                              src="http://lorempixel.com/200/200/sports/2"
+                            />
+                          </div>
+                        </Thumbnail>
+                      </div>
+                    </Col>
+                    <Col
+                      bsClass="col"
+                      componentClass="div"
+                      key="Bike"
+                      md={3}
+                      xs={6}
+                    >
+                      <div
+                        className="col-md-3 col-xs-6"
+                      >
+                        <Thumbnail
+                          alt="Bike"
+                          bsClass="thumbnail"
+                          className=""
+                          onClick={[Function]}
+                          src="http://lorempixel.com/200/200/sports/3"
+                        >
+                          <div
+                            className="thumbnail"
+                            onClick={[Function]}
+                          >
+                            <img
+                              alt="Bike"
+                              onError={undefined}
+                              onLoad={undefined}
+                              src="http://lorempixel.com/200/200/sports/3"
+                            />
+                          </div>
+                        </Thumbnail>
+                      </div>
+                    </Col>
+                  </div>
+                </Row>
+              </div>
+            </Grid>
+          </div>
+        </Component>
+        <Component
+          next={[Function]}
+          previous={[Function]}
+          random={[Function]}
+        >
+          <div
+            className="col-lg-6 col-md-offset-3"
+          >
+            <Button
+              active={false}
+              block={false}
+              bsClass="btn"
+              bsStyle="info"
+              className="col-lg-2"
+              disabled={false}
+              id="previous"
+              onClick={[Function]}
+            >
+              <button
+                className="col-lg-2 btn btn-info"
+                disabled={false}
+                id="previous"
+                onClick={[Function]}
+                type="button"
+              >
+                Previous
+              </button>
+            </Button>
+            <Button
+              active={false}
+              block={false}
+              bsClass="btn"
+              bsStyle="info"
+              className="col-lg-2"
+              disabled={false}
+              id="next"
+              onClick={[Function]}
+            >
+              <button
+                className="col-lg-2 btn btn-info"
+                disabled={false}
+                id="next"
+                onClick={[Function]}
+                type="button"
+              >
+                Next
+              </button>
+            </Button>
+            <Button
+              active={false}
+              block={false}
+              bsClass="btn"
+              bsStyle="info"
+              className="col-lg-2"
+              disabled={false}
+              id="random"
+              onClick={[Function]}
+            >
+              <button
+                className="col-lg-2 btn btn-info"
+                disabled={false}
+                id="random"
+                onClick={[Function]}
+                type="button"
+              >
+                Random
+              </button>
+            </Button>
+          </div>
+        </Component>
+        <Component
+          photo={
+            Object {
+              "bigSrc": "http://lorempixel.com/500/500/sports/2",
+              "index": 2,
+              "tinySrc": "http://lorempixel.com/200/200/sports/2",
+              "title": "Surf",
+            }
+          }
+        >
+          <div
+            className="row"
+          >
+            <div
+              className="col-lg-12"
+            >
+              <h2>
+                Surf
+              </h2>
+            </div>
+            <Image
+              bsClass="img"
+              circle={false}
+              className="row"
+              responsive={false}
+              rounded={false}
+              src="http://lorempixel.com/500/500/sports/2"
+              thumbnail={false}
+              title="Surf"
+            >
+              <img
+                className="row"
+                src="http://lorempixel.com/500/500/sports/2"
+                title="Surf"
+              />
+            </Image>
+          </div>
+        </Component>
+      </div>
+    </PhotoBooth>
+  </div>
+</App>
+`;
+
+exports[`photo booth navigates to previous photo 1`] = `
+<App
+  store={[Function]}
+>
+  <div
+    className="App"
+  >
+    <PhotoBooth
+      store={
+        PhotoStore {
+          "listeners": Array [
+            [Function],
+            [Function],
+          ],
+          "state": Object {
+            "allPhotos": Array [
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/1",
+                "index": 1,
+                "tinySrc": "http://lorempixel.com/200/200/sports/1",
+                "title": "Baseball",
+              },
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/2",
+                "index": 2,
+                "tinySrc": "http://lorempixel.com/200/200/sports/2",
+                "title": "Surf",
+              },
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/3",
+                "index": 3,
+                "tinySrc": "http://lorempixel.com/200/200/sports/3",
+                "title": "Bike",
+              },
+            ],
+            "currentPhoto": Object {
+              "bigSrc": "http://lorempixel.com/500/500/sports/1",
+              "index": 1,
+              "tinySrc": "http://lorempixel.com/200/200/sports/1",
+              "title": "Baseball",
+            },
+          },
+        }
+      }
+    >
+      <div>
+        <Component>
+          <header
+            className="masthead"
+          >
+            <div
+              className="header-content"
+            >
+              <div
+                className="header-content-inner"
+              >
+                <h1
+                  id="homeHeading"
+                >
+                  PhotoBooth!
+                </h1>
+                <hr />
+              </div>
+            </div>
+          </header>
+        </Component>
+        <Component
+          allPhotos={
+            Array [
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/1",
+                "index": 1,
+                "tinySrc": "http://lorempixel.com/200/200/sports/1",
+                "title": "Baseball",
+              },
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/2",
+                "index": 2,
+                "tinySrc": "http://lorempixel.com/200/200/sports/2",
+                "title": "Surf",
+              },
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/3",
+                "index": 3,
+                "tinySrc": "http://lorempixel.com/200/200/sports/3",
+                "title": "Bike",
+              },
+            ]
+          }
+          currentPhoto={
+            Object {
+              "bigSrc": "http://lorempixel.com/500/500/sports/1",
+              "index": 1,
+              "tinySrc": "http://lorempixel.com/200/200/sports/1",
+              "title": "Baseball",
+            }
+          }
+          thumbnailSelected={[Function]}
+        >
+          <div
+            className="col-lg-6 col-md-offset-3"
+          >
+            <Grid
+              bsClass="container"
+              componentClass="div"
+              fluid={false}
+            >
+              <div
+                className="container"
+              >
+                <Row
+                  bsClass="row"
+                  componentClass="div"
+                >
+                  <div
+                    className="row"
+                  >
+                    <Col
+                      bsClass="col"
+                      componentClass="div"
+                      key="Baseball"
+                      md={3}
+                      xs={6}
+                    >
+                      <div
+                        className="col-md-3 col-xs-6"
+                      >
+                        <Thumbnail
+                          alt="Baseball"
+                          bsClass="thumbnail"
+                          className="selected"
+                          onClick={[Function]}
+                          src="http://lorempixel.com/200/200/sports/1"
+                        >
+                          <div
+                            className="selected thumbnail"
+                            onClick={[Function]}
+                          >
+                            <img
+                              alt="Baseball"
+                              onError={undefined}
+                              onLoad={undefined}
+                              src="http://lorempixel.com/200/200/sports/1"
+                            />
+                          </div>
+                        </Thumbnail>
+                      </div>
+                    </Col>
+                    <Col
+                      bsClass="col"
+                      componentClass="div"
+                      key="Surf"
+                      md={3}
+                      xs={6}
+                    >
+                      <div
+                        className="col-md-3 col-xs-6"
+                      >
+                        <Thumbnail
+                          alt="Surf"
+                          bsClass="thumbnail"
+                          className=""
+                          onClick={[Function]}
+                          src="http://lorempixel.com/200/200/sports/2"
+                        >
+                          <div
+                            className="thumbnail"
+                            onClick={[Function]}
+                          >
+                            <img
+                              alt="Surf"
+                              onError={undefined}
+                              onLoad={undefined}
+                              src="http://lorempixel.com/200/200/sports/2"
+                            />
+                          </div>
+                        </Thumbnail>
+                      </div>
+                    </Col>
+                    <Col
+                      bsClass="col"
+                      componentClass="div"
+                      key="Bike"
+                      md={3}
+                      xs={6}
+                    >
+                      <div
+                        className="col-md-3 col-xs-6"
+                      >
+                        <Thumbnail
+                          alt="Bike"
+                          bsClass="thumbnail"
+                          className=""
+                          onClick={[Function]}
+                          src="http://lorempixel.com/200/200/sports/3"
+                        >
+                          <div
+                            className="thumbnail"
+                            onClick={[Function]}
+                          >
+                            <img
+                              alt="Bike"
+                              onError={undefined}
+                              onLoad={undefined}
+                              src="http://lorempixel.com/200/200/sports/3"
+                            />
+                          </div>
+                        </Thumbnail>
+                      </div>
+                    </Col>
+                  </div>
+                </Row>
+              </div>
+            </Grid>
+          </div>
+        </Component>
+        <Component
+          next={[Function]}
+          previous={[Function]}
+          random={[Function]}
+        >
+          <div
+            className="col-lg-6 col-md-offset-3"
+          >
+            <Button
+              active={false}
+              block={false}
+              bsClass="btn"
+              bsStyle="info"
+              className="col-lg-2"
+              disabled={false}
+              id="previous"
+              onClick={[Function]}
+            >
+              <button
+                className="col-lg-2 btn btn-info"
+                disabled={false}
+                id="previous"
+                onClick={[Function]}
+                type="button"
+              >
+                Previous
+              </button>
+            </Button>
+            <Button
+              active={false}
+              block={false}
+              bsClass="btn"
+              bsStyle="info"
+              className="col-lg-2"
+              disabled={false}
+              id="next"
+              onClick={[Function]}
+            >
+              <button
+                className="col-lg-2 btn btn-info"
+                disabled={false}
+                id="next"
+                onClick={[Function]}
+                type="button"
+              >
+                Next
+              </button>
+            </Button>
+            <Button
+              active={false}
+              block={false}
+              bsClass="btn"
+              bsStyle="info"
+              className="col-lg-2"
+              disabled={false}
+              id="random"
+              onClick={[Function]}
+            >
+              <button
+                className="col-lg-2 btn btn-info"
+                disabled={false}
+                id="random"
+                onClick={[Function]}
+                type="button"
+              >
+                Random
+              </button>
+            </Button>
+          </div>
+        </Component>
+        <Component
+          photo={
+            Object {
+              "bigSrc": "http://lorempixel.com/500/500/sports/1",
+              "index": 1,
+              "tinySrc": "http://lorempixel.com/200/200/sports/1",
+              "title": "Baseball",
+            }
+          }
+        >
+          <div
+            className="row"
+          >
+            <div
+              className="col-lg-12"
+            >
+              <h2>
+                Baseball
+              </h2>
+            </div>
+            <Image
+              bsClass="img"
+              circle={false}
+              className="row"
+              responsive={false}
+              rounded={false}
+              src="http://lorempixel.com/500/500/sports/1"
+              thumbnail={false}
+              title="Baseball"
+            >
+              <img
+                className="row"
+                src="http://lorempixel.com/500/500/sports/1"
+                title="Baseball"
+              />
+            </Image>
+          </div>
+        </Component>
+      </div>
+    </PhotoBooth>
+  </div>
+</App>
+`;
+
+exports[`photo booth navigates to random 1`] = `
+<App
+  store={[Function]}
+>
+  <div
+    className="App"
+  >
+    <PhotoBooth
+      store={
+        PhotoStore {
+          "listeners": Array [
+            [Function],
+            [Function],
+          ],
+          "state": Object {
+            "allPhotos": Array [
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/1",
+                "index": 1,
+                "tinySrc": "http://lorempixel.com/200/200/sports/1",
+                "title": "Baseball",
+              },
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/2",
+                "index": 2,
+                "tinySrc": "http://lorempixel.com/200/200/sports/2",
+                "title": "Surf",
+              },
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/3",
+                "index": 3,
+                "tinySrc": "http://lorempixel.com/200/200/sports/3",
+                "title": "Bike",
+              },
+            ],
+            "currentPhoto": Object {
+              "bigSrc": "http://lorempixel.com/500/500/sports/1",
+              "index": 1,
+              "tinySrc": "http://lorempixel.com/200/200/sports/1",
+              "title": "Baseball",
+            },
+          },
+        }
+      }
+    >
+      <div>
+        <Component>
+          <header
+            className="masthead"
+          >
+            <div
+              className="header-content"
+            >
+              <div
+                className="header-content-inner"
+              >
+                <h1
+                  id="homeHeading"
+                >
+                  PhotoBooth!
+                </h1>
+                <hr />
+              </div>
+            </div>
+          </header>
+        </Component>
+        <Component
+          allPhotos={
+            Array [
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/1",
+                "index": 1,
+                "tinySrc": "http://lorempixel.com/200/200/sports/1",
+                "title": "Baseball",
+              },
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/2",
+                "index": 2,
+                "tinySrc": "http://lorempixel.com/200/200/sports/2",
+                "title": "Surf",
+              },
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/3",
+                "index": 3,
+                "tinySrc": "http://lorempixel.com/200/200/sports/3",
+                "title": "Bike",
+              },
+            ]
+          }
+          currentPhoto={
+            Object {
+              "bigSrc": "http://lorempixel.com/500/500/sports/1",
+              "index": 1,
+              "tinySrc": "http://lorempixel.com/200/200/sports/1",
+              "title": "Baseball",
+            }
+          }
+          thumbnailSelected={[Function]}
+        >
+          <div
+            className="col-lg-6 col-md-offset-3"
+          >
+            <Grid
+              bsClass="container"
+              componentClass="div"
+              fluid={false}
+            >
+              <div
+                className="container"
+              >
+                <Row
+                  bsClass="row"
+                  componentClass="div"
+                >
+                  <div
+                    className="row"
+                  >
+                    <Col
+                      bsClass="col"
+                      componentClass="div"
+                      key="Baseball"
+                      md={3}
+                      xs={6}
+                    >
+                      <div
+                        className="col-md-3 col-xs-6"
+                      >
+                        <Thumbnail
+                          alt="Baseball"
+                          bsClass="thumbnail"
+                          className="selected"
+                          onClick={[Function]}
+                          src="http://lorempixel.com/200/200/sports/1"
+                        >
+                          <div
+                            className="selected thumbnail"
+                            onClick={[Function]}
+                          >
+                            <img
+                              alt="Baseball"
+                              onError={undefined}
+                              onLoad={undefined}
+                              src="http://lorempixel.com/200/200/sports/1"
+                            />
+                          </div>
+                        </Thumbnail>
+                      </div>
+                    </Col>
+                    <Col
+                      bsClass="col"
+                      componentClass="div"
+                      key="Surf"
+                      md={3}
+                      xs={6}
+                    >
+                      <div
+                        className="col-md-3 col-xs-6"
+                      >
+                        <Thumbnail
+                          alt="Surf"
+                          bsClass="thumbnail"
+                          className=""
+                          onClick={[Function]}
+                          src="http://lorempixel.com/200/200/sports/2"
+                        >
+                          <div
+                            className="thumbnail"
+                            onClick={[Function]}
+                          >
+                            <img
+                              alt="Surf"
+                              onError={undefined}
+                              onLoad={undefined}
+                              src="http://lorempixel.com/200/200/sports/2"
+                            />
+                          </div>
+                        </Thumbnail>
+                      </div>
+                    </Col>
+                    <Col
+                      bsClass="col"
+                      componentClass="div"
+                      key="Bike"
+                      md={3}
+                      xs={6}
+                    >
+                      <div
+                        className="col-md-3 col-xs-6"
+                      >
+                        <Thumbnail
+                          alt="Bike"
+                          bsClass="thumbnail"
+                          className=""
+                          onClick={[Function]}
+                          src="http://lorempixel.com/200/200/sports/3"
+                        >
+                          <div
+                            className="thumbnail"
+                            onClick={[Function]}
+                          >
+                            <img
+                              alt="Bike"
+                              onError={undefined}
+                              onLoad={undefined}
+                              src="http://lorempixel.com/200/200/sports/3"
+                            />
+                          </div>
+                        </Thumbnail>
+                      </div>
+                    </Col>
+                  </div>
+                </Row>
+              </div>
+            </Grid>
+          </div>
+        </Component>
+        <Component
+          next={[Function]}
+          previous={[Function]}
+          random={[Function]}
+        >
+          <div
+            className="col-lg-6 col-md-offset-3"
+          >
+            <Button
+              active={false}
+              block={false}
+              bsClass="btn"
+              bsStyle="info"
+              className="col-lg-2"
+              disabled={false}
+              id="previous"
+              onClick={[Function]}
+            >
+              <button
+                className="col-lg-2 btn btn-info"
+                disabled={false}
+                id="previous"
+                onClick={[Function]}
+                type="button"
+              >
+                Previous
+              </button>
+            </Button>
+            <Button
+              active={false}
+              block={false}
+              bsClass="btn"
+              bsStyle="info"
+              className="col-lg-2"
+              disabled={false}
+              id="next"
+              onClick={[Function]}
+            >
+              <button
+                className="col-lg-2 btn btn-info"
+                disabled={false}
+                id="next"
+                onClick={[Function]}
+                type="button"
+              >
+                Next
+              </button>
+            </Button>
+            <Button
+              active={false}
+              block={false}
+              bsClass="btn"
+              bsStyle="info"
+              className="col-lg-2"
+              disabled={false}
+              id="random"
+              onClick={[Function]}
+            >
+              <button
+                className="col-lg-2 btn btn-info"
+                disabled={false}
+                id="random"
+                onClick={[Function]}
+                type="button"
+              >
+                Random
+              </button>
+            </Button>
+          </div>
+        </Component>
+        <Component
+          photo={
+            Object {
+              "bigSrc": "http://lorempixel.com/500/500/sports/1",
+              "index": 1,
+              "tinySrc": "http://lorempixel.com/200/200/sports/1",
+              "title": "Baseball",
+            }
+          }
+        >
+          <div
+            className="row"
+          >
+            <div
+              className="col-lg-12"
+            >
+              <h2>
+                Baseball
+              </h2>
+            </div>
+            <Image
+              bsClass="img"
+              circle={false}
+              className="row"
+              responsive={false}
+              rounded={false}
+              src="http://lorempixel.com/500/500/sports/1"
+              thumbnail={false}
+              title="Baseball"
+            >
+              <img
+                className="row"
+                src="http://lorempixel.com/500/500/sports/1"
+                title="Baseball"
+              />
+            </Image>
+          </div>
+        </Component>
+      </div>
+    </PhotoBooth>
+  </div>
+</App>
+`;
+
+exports[`renders correctly 1`] = `
+<App
+  store={[Function]}
+>
+  <div
+    className="App"
+  >
+    <PhotoBooth
+      store={
+        PhotoStore {
+          "listeners": Array [
+            [Function],
+          ],
+          "state": Object {
+            "allPhotos": Array [
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/1",
+                "index": 1,
+                "tinySrc": "http://lorempixel.com/200/200/sports/1",
+                "title": "Baseball",
+              },
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/2",
+                "index": 2,
+                "tinySrc": "http://lorempixel.com/200/200/sports/2",
+                "title": "Surf",
+              },
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/3",
+                "index": 3,
+                "tinySrc": "http://lorempixel.com/200/200/sports/3",
+                "title": "Bike",
+              },
+            ],
+            "currentPhoto": Object {
+              "bigSrc": "http://lorempixel.com/500/500/sports/1",
+              "index": 1,
+              "tinySrc": "http://lorempixel.com/200/200/sports/1",
+              "title": "Baseball",
+            },
+          },
+        }
+      }
+    >
+      <div>
+        <Component>
+          <header
+            className="masthead"
+          >
+            <div
+              className="header-content"
+            >
+              <div
+                className="header-content-inner"
+              >
+                <h1
+                  id="homeHeading"
+                >
+                  PhotoBooth!
+                </h1>
+                <hr />
+              </div>
+            </div>
+          </header>
+        </Component>
+        <Component
+          allPhotos={
+            Array [
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/1",
+                "index": 1,
+                "tinySrc": "http://lorempixel.com/200/200/sports/1",
+                "title": "Baseball",
+              },
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/2",
+                "index": 2,
+                "tinySrc": "http://lorempixel.com/200/200/sports/2",
+                "title": "Surf",
+              },
+              Object {
+                "bigSrc": "http://lorempixel.com/500/500/sports/3",
+                "index": 3,
+                "tinySrc": "http://lorempixel.com/200/200/sports/3",
+                "title": "Bike",
+              },
+            ]
+          }
+          currentPhoto={
+            Object {
+              "bigSrc": "http://lorempixel.com/500/500/sports/1",
+              "index": 1,
+              "tinySrc": "http://lorempixel.com/200/200/sports/1",
+              "title": "Baseball",
+            }
+          }
+          thumbnailSelected={[Function]}
+        >
+          <div
+            className="col-lg-6 col-md-offset-3"
+          >
+            <Grid
+              bsClass="container"
+              componentClass="div"
+              fluid={false}
+            >
+              <div
+                className="container"
+              >
+                <Row
+                  bsClass="row"
+                  componentClass="div"
+                >
+                  <div
+                    className="row"
+                  >
+                    <Col
+                      bsClass="col"
+                      componentClass="div"
+                      key="Baseball"
+                      md={3}
+                      xs={6}
+                    >
+                      <div
+                        className="col-md-3 col-xs-6"
+                      >
+                        <Thumbnail
+                          alt="Baseball"
+                          bsClass="thumbnail"
+                          className="selected"
+                          onClick={[Function]}
+                          src="http://lorempixel.com/200/200/sports/1"
+                        >
+                          <div
+                            className="selected thumbnail"
+                            onClick={[Function]}
+                          >
+                            <img
+                              alt="Baseball"
+                              onError={undefined}
+                              onLoad={undefined}
+                              src="http://lorempixel.com/200/200/sports/1"
+                            />
+                          </div>
+                        </Thumbnail>
+                      </div>
+                    </Col>
+                    <Col
+                      bsClass="col"
+                      componentClass="div"
+                      key="Surf"
+                      md={3}
+                      xs={6}
+                    >
+                      <div
+                        className="col-md-3 col-xs-6"
+                      >
+                        <Thumbnail
+                          alt="Surf"
+                          bsClass="thumbnail"
+                          className=""
+                          onClick={[Function]}
+                          src="http://lorempixel.com/200/200/sports/2"
+                        >
+                          <div
+                            className="thumbnail"
+                            onClick={[Function]}
+                          >
+                            <img
+                              alt="Surf"
+                              onError={undefined}
+                              onLoad={undefined}
+                              src="http://lorempixel.com/200/200/sports/2"
+                            />
+                          </div>
+                        </Thumbnail>
+                      </div>
+                    </Col>
+                    <Col
+                      bsClass="col"
+                      componentClass="div"
+                      key="Bike"
+                      md={3}
+                      xs={6}
+                    >
+                      <div
+                        className="col-md-3 col-xs-6"
+                      >
+                        <Thumbnail
+                          alt="Bike"
+                          bsClass="thumbnail"
+                          className=""
+                          onClick={[Function]}
+                          src="http://lorempixel.com/200/200/sports/3"
+                        >
+                          <div
+                            className="thumbnail"
+                            onClick={[Function]}
+                          >
+                            <img
+                              alt="Bike"
+                              onError={undefined}
+                              onLoad={undefined}
+                              src="http://lorempixel.com/200/200/sports/3"
+                            />
+                          </div>
+                        </Thumbnail>
+                      </div>
+                    </Col>
+                  </div>
+                </Row>
+              </div>
+            </Grid>
+          </div>
+        </Component>
+        <Component
+          next={[Function]}
+          previous={[Function]}
+          random={[Function]}
+        >
+          <div
+            className="col-lg-6 col-md-offset-3"
+          >
+            <Button
+              active={false}
+              block={false}
+              bsClass="btn"
+              bsStyle="info"
+              className="col-lg-2"
+              disabled={false}
+              id="previous"
+              onClick={[Function]}
+            >
+              <button
+                className="col-lg-2 btn btn-info"
+                disabled={false}
+                id="previous"
+                onClick={[Function]}
+                type="button"
+              >
+                Previous
+              </button>
+            </Button>
+            <Button
+              active={false}
+              block={false}
+              bsClass="btn"
+              bsStyle="info"
+              className="col-lg-2"
+              disabled={false}
+              id="next"
+              onClick={[Function]}
+            >
+              <button
+                className="col-lg-2 btn btn-info"
+                disabled={false}
+                id="next"
+                onClick={[Function]}
+                type="button"
+              >
+                Next
+              </button>
+            </Button>
+            <Button
+              active={false}
+              block={false}
+              bsClass="btn"
+              bsStyle="info"
+              className="col-lg-2"
+              disabled={false}
+              id="random"
+              onClick={[Function]}
+            >
+              <button
+                className="col-lg-2 btn btn-info"
+                disabled={false}
+                id="random"
+                onClick={[Function]}
+                type="button"
+              >
+                Random
+              </button>
+            </Button>
+          </div>
+        </Component>
+        <Component
+          photo={
+            Object {
+              "bigSrc": "http://lorempixel.com/500/500/sports/1",
+              "index": 1,
+              "tinySrc": "http://lorempixel.com/200/200/sports/1",
+              "title": "Baseball",
+            }
+          }
+        >
+          <div
+            className="row"
+          >
+            <div
+              className="col-lg-12"
+            >
+              <h2>
+                Baseball
+              </h2>
+            </div>
+            <Image
+              bsClass="img"
+              circle={false}
+              className="row"
+              responsive={false}
+              rounded={false}
+              src="http://lorempixel.com/500/500/sports/1"
+              thumbnail={false}
+              title="Baseball"
+            >
+              <img
+                className="row"
+                src="http://lorempixel.com/500/500/sports/1"
+                title="Baseball"
+              />
+            </Image>
+          </div>
+        </Component>
+      </div>
+    </PhotoBooth>
+  </div>
+</App>
 `;
