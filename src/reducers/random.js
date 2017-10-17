@@ -5,7 +5,6 @@ function selectPhoto(index, allPhotos){
 }
 
 export default function (state, _action){
-    console.log(nextRandom())
     return Object.assign({}, state, {
         currentPhoto: selectPhoto(
             nextRandom(state.currentPhoto.index, state.allPhotos.length),

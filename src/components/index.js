@@ -27,7 +27,6 @@ class PhotoBooth extends Component {
     }
 
     next = () => {
-        console.log("dafdas sdf")
         this.props.store.dispatch(actions.nextPhoto());
     }
 

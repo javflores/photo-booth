@@ -1,3 +1,6 @@
+// import raf from './setupTests';
+//https://github.com/facebookincubator/create-react-app/issues/3199
+
 import React from 'react';
 import { mount } from 'enzyme';
 import { mountToJson } from 'enzyme-to-json';
@@ -5,6 +8,7 @@ import { mountToJson } from 'enzyme-to-json';
 import store from './store/index';
 import * as random from './utilities/random';
 import App from './App';
+
 
 it('renders correctly', () => {
     const app = mount(

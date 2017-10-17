@@ -1,9 +1,9 @@
+// import raf from '../setupTests';
+
 import React from 'react';
 import { shallow } from 'enzyme';
 
 import {loadPhotos} from '../actions';
-import store from '../store';
-
 import Index from './index';
 
 describe('When photo booth', () => {
