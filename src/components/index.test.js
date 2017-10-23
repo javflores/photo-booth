@@ -1,5 +1,3 @@
-// import raf from '../setupTests';
-
 import React from 'react';
 import { shallow } from 'enzyme';
 
