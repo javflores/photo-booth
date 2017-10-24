@@ -24,6 +24,15 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
+  "jest": {
+    "collectCoverageFrom":
+      [
+        "src/**/*.{js,jsx}",
+        "!src/index.js",
+        "!src/registerServiceWorker.js",
+        "!src/tempPolyfills.js",
+        "!src/setupTests.js"]
+  },
   "devDependencies": {
     "enzyme": "^3.1.0",
     "enzyme-adapter-react-16": "^1.0.1",
