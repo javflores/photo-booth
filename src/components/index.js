@@ -11,10 +11,11 @@ class PhotoBooth extends Component {
     constructor(props){
         super(props);
         this.state = props.store.getState();
-        props.store.subscribe(() => {
-            let state = props.store.getState();
-            this.setState(state);
-        });
+        props.store.subscribe(this.updatePhotoBooth);
+    }
+
+    updatePhotoBooth = () => {
+        this.setState(this.props.store.getState());
     }
 
     thumbnailSelected(thumbnailIndex){

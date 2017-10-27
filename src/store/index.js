@@ -2,7 +2,7 @@ import photoReducer from '../reducers/index';
 
 class PhotoStore{
     constructor(){
-       this.state = {
+        this.state = {
            currentPhoto: {title: "", index: 0},
            allPhotos: []
        };

@@ -23,5 +23,20 @@
     "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "jest": {
+    "collectCoverageFrom":
+      [
+        "src/**/*.{js,jsx}",
+        "!src/index.js",
+        "!src/registerServiceWorker.js",
+        "!src/tempPolyfills.js",
+        "!src/setupTests.js"]
+  },
+  "devDependencies": {
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-16": "^1.0.1",
+    "enzyme-to-json": "^3.1.2",
+    "react-test-renderer": "^16.0.0"
   }
 }
