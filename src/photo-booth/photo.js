@@ -1,26 +1,33 @@
 import React from 'react';
 import {Image} from 'react-bootstrap';
-import PhotoStore from './photo-store';
+import withGraphQL from '../graphql/with-graphql';
 
-export default ({currentPhoto}) => {
-    const photoMetadata = getCurrentPhotoMetadata(currentPhoto);
+const Photo = ({currentPhoto, data}) => {
+    if(!data) return null;
+
+    const photoMetadata = getCurrentPhotoMetadata(currentPhoto, data.organization.members.nodes);
     return (
         <div className="row">
             <div className="col-lg-12">
                 <h2>{photoMetadata.title}</h2>
+                <Image
+                    className="row"
+                    src={photoMetadata.src}
+                    title={photoMetadata.title}/>
             </div>
-            <Image
-                className="row"
-                src={`${PhotoStore.baseUrl}/${PhotoStore.bigImage}/${photoMetadata.src}`}
-                title={photoMetadata.title}/>
         </div>
     );
 };
 
-function getCurrentPhotoMetadata(currentPhoto) {
-    const photo = PhotoStore.allPhotos[currentPhoto - 1];
+function getCurrentPhotoMetadata(currentPhoto, photos) {
+    const photo = photos[currentPhoto];
     return {
-        src: photo.src,
-        title: photo.title
+        src: photo.avatarUrl,
+        title: photo.name
     };
 };
+
+const query = 'query($login:String!) { organization(login:$login) { members(first: 3) { nodes { name avatarUrl } } } }';
+const params = { variables: {"login": "findmypast" }};
+
+export default withGraphQL(query, params)(Photo);

@@ -4,7 +4,6 @@ import Thumbnails from './thumbnails';
 import Photo from './photo';
 import Header from './header';
 import PhotoControls from './photo-controls';
-import ImageStore from './photo-store';
 
 class PhotoBooth extends Component {
     constructor(props){
@@ -25,11 +24,11 @@ class PhotoBooth extends Component {
     }
 
     isLastPhoto(){
-        return this.state.currentPhoto === ImageStore.allPhotos.length;
+        return this.state.currentPhoto === 2;
     }
 
     previous = () => {
-        let currentPhoto = this.isFirstPhoto() ? 3 : this.state.currentPhoto - 1;
+        let currentPhoto = this.isFirstPhoto() ? 2 : this.state.currentPhoto - 1;
 
         this.setState({
             currentPhoto: currentPhoto
@@ -37,7 +36,7 @@ class PhotoBooth extends Component {
     }
 
     next = () => {
-        let currentPhoto = this.isLastPhoto() ? 1 : this.state.currentPhoto + 1;
+        let currentPhoto = this.isLastPhoto() ? 0 : this.state.currentPhoto + 1;
         this.setState({
             currentPhoto: currentPhoto
         })
